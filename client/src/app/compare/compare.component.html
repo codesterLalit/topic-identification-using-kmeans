@@ -1,0 +1,77 @@
+<app-header></app-header>
+<div class="parallax">
+  <h1>Comparison of Big vs Small document</h1>
+</div>
+<div class="description">
+  <h1>Comparision of Big vs Small documents</h1>
+  <p>
+    For testing and comparing small vs big document that data set of Neural
+    Information Processing System (NIPS) was used. 1209 different paper with
+    title, abstract and full Text was used. First It was polished and
+    preprocessed and then it was compared. Since, common subject, common words
+    accuracy was way too low but compare was done with accuracy and time even
+    thought it was low.
+  </p>
+  <h1>1. Result of small document</h1>
+
+  
+  <!-- Table for showing data about performance -->
+  <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+    <ng-container matColumnDef="SerialNum">
+      <th mat-header-cell *matHeaderCellDef>S/N</th>
+      <td mat-cell *matCellDef="let element">{{ element.SerialNum }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cluster">
+      <th mat-header-cell *matHeaderCellDef>Cluster</th>
+      <td mat-cell *matCellDef="let element">{{ element.cluster }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Accuracy">
+      <th mat-header-cell *matHeaderCellDef>Accuracy</th>
+      <td mat-cell *matCellDef="let element">{{ element.Accuracy }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="time_in_sec">
+      <th mat-header-cell *matHeaderCellDef>Time</th>
+      <td mat-cell *matCellDef="let element">{{ element.time_in_sec }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+
+  <h1>2. Result of small document</h1>
+  <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+    <ng-container matColumnDef="SerialNum">
+      <th mat-header-cell *matHeaderCellDef>S/N</th>
+      <td mat-cell *matCellDef="let element">{{ element.SerialNum }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cluster">
+      <th mat-header-cell *matHeaderCellDef>Cluster</th>
+      <td mat-cell *matCellDef="let element">{{ element.cluster }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Accuracy">
+      <th mat-header-cell *matHeaderCellDef>Accuracy</th>
+      <td mat-cell *matCellDef="let element">{{ element.Accuracy }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="time_in_sec">
+      <th mat-header-cell *matHeaderCellDef>Time</th>
+      <td mat-cell *matCellDef="let element">{{ element.time_in_sec }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <p class="result">
+    From above result we can see that as a dimensionality of that data increase
+    in Full Text the accuracy as well as time complexities. From comparison, we
+    can see that accuracy of result in low in big document as well as 4 to 7
+    time increase in time complexities.
+  </p>
+</div>
+<app-footer></app-footer>

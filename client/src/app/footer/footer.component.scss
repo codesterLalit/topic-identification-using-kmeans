@@ -1,0 +1,14 @@
+.bg-blue {
+  background-color: rgb(48, 64, 148);
+}
+footer {
+  height: 50px;
+  padding-top: 20px;
+
+  .footer-copyright {
+    color: white;
+    a {
+      color: rgb(216, 215, 255);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #324299;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 16px;
+}
+
+.button {
+  color: white;
+  margin: 0px 10px;
+}
+.main-logo {
+  width: 50%;
+  min-width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-btn button {
+  margin: 0px 10px;
+}

@@ -1,0 +1,103 @@
+<!-- Indentificy section -->
+<section class="identify">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <!-- Section for Identifying topic by pasting -->
+    <mat-grid-tile>
+      <div class="left-tile">
+        <h1>Paste your document to detect title of your document</h1>
+        <div class="infomatic">
+          <div class="info-para">
+            <p>
+              Detect your title by analyzing the keyword of your content.<br />
+              You can paste text such essay or article.
+            </p>
+          </div>
+          <div class="info-img">
+            <img src="../../assets/icons/paste.png" class="main-image" alt="" />
+          </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="text-predict">
+      <form id="paper" (ngSubmit)="identify()">
+        <textarea
+          placeholder="Text here..."
+          [formControl]="name"
+          id="text"
+          name="text"
+          rows="4"
+          style="
+            overflow: hidden;
+            word-wrap: break-word;
+            resize: none;
+            height: 200px;
+            outline: none;
+          "
+        ></textarea>
+        <br />
+        <button
+          mat-raised-button
+          color="primary"
+          style="margin-top: 20px;"
+          type="submit"
+        >
+          Identify
+        </button>
+      </form>
+    </mat-grid-tile>
+    <mat-grid-tile class="upload-docx">
+      <div style="text-align: center; margin-top: 100px;">
+        <mat-card style="margin-top: 10px; width: 100%; height: 105px;">
+          <mat-card-content>
+            <ul>
+              <li *ngFor="let file of files">
+                <mat-progress-bar [value]="file.progress"></mat-progress-bar>
+                <span id="file-label"> </span>
+              </li>
+            </ul>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="warn" (click)="onClick()">
+              <mat-icon>file_upload</mat-icon>
+              Upload
+            </button>
+          </mat-card-actions> </mat-card
+        ><input
+          type="file"
+          #fileUpload
+          id="fileUpload"
+          name="fileUpload"
+          multiple="multiple"
+          accept=".doc, .docx"
+          style="display: none;"
+        />
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <!-- Section for Identifying topic by uploading  -->
+      <div>
+        <h1>Upload your docx file to detect possible title</h1>
+        <div class="infomatic">
+          <div class="info-img">
+            <img
+              src="../../assets/icons/docx-file.png"
+              class="main-image"
+              alt=""
+            />
+          </div>
+          <div class="info-para">
+            <p>
+              Detect your title by analyzing the keyword of your content.<br />
+              You can paste text such essay or article.
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <ngx-loading
+    [show]="loading"
+    [config]="{ backdropBorderRadius: '3px' }"
+    [template]="customLoadingTemplate"
+  ></ngx-loading>
+</section>

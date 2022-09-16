@@ -1,0 +1,41 @@
+.parallax {
+  /* The image used */
+  background-image: url("./../../assets/background.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  h1 {
+    color: #0a2c59;
+    -webkit-box-shadow: 11px 14px 24px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 14px 24px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 14px 24px 6px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    background-color: lighten($color: #fdfdfdde, $amount: 0.5);
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    font-family: "Courier New", Courier, monospace;
+    font-family: 40px;
+    font-weight: bold;
+    padding: 10px;
+  }
+}
+
+.description {
+  width: 80%;
+  margin: 20px auto;
+  color: black;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  p {
+    text-align: justify;
+  }
+}
